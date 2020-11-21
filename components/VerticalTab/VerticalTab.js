@@ -15,13 +15,13 @@ const VerticalTab = (props) => {
           </TouchableOpacity>
           {
             menu.map((listitem, index) => <View key={listitem.item_id} >
-              <View  style={{ flexDirection: 'row'}}>
-                <View style={{ flex: 7 }}>
+              <View  style={{ flexDirection: 'row',flex:1}}>
+                <View style={{ flex: 0.7 }}>
                   <Text style={{ fontWeight: '700' }}>{listitem.item_name}</Text>
-                  <Text numberOfLines={4}>{listitem.item_desc}</Text>
+                  <Text numberOfLines={4} style={{flexWrap:'wrap'}}>{listitem.item_desc}</Text>
                   <Text style={{ marginTop: 8, fontWeight: 'bold' }}>₹ {listitem.item_price}</Text>
                 </View>
-                <View style={{ flex: 3 ,alignItems:'flex-end'}}>
+                <View style={{ flex: 0.3 ,alignItems:'flex-end'}}>
                   <Image source={listitem.item_image} style={{ width: 100, height: 90 }} />
                 </View>
               </View>
